@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/src">
+    <link rel="stylesheet" href="./index.css">
     <title>To Do list</title>
 </head>
 <body>
     <div id="todo-container">
         <div id="title">
-            <h2>Today's To Do</h2>
+            <h3>Today's To Do</h3>
             <span><i class="fas fa-sync recycle"></i></span>
         </div>
         <div class="list-container">
             <input type="text" name="activity" id="list-activity" placeholder="Add to your list...">
             <span class="enter">&crarr;</span>
         </div>
-        <ul id="dynamic-list">
-        </ul>
-        <button id="remove" type="button">Clean all completed</button>
+        <ul id="dynamic-list"></ul>
+        <div class="delete">
+            <button id="remove" type="button">Clear all completed</button>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
