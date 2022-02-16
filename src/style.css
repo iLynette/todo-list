@@ -41,11 +41,11 @@ body {
 }
 
 .one {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    border-bottom: 1px solid rgb(211, 209, 209);
-    padding-left: 25px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid rgb(211, 209, 209);
+  padding-left: 25px;
 }
 
 .one p {
