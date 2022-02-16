@@ -6,12 +6,12 @@ const todos = [
   {
     description: 'Wash the dishes',
     completed: false,
-    index: 0,
+    index: 1,
   },
   {
     description: 'complete To Do list project',
-    completed: false,
-    index: 1,
+    completed: true,
+    index: 0,
   },
 ];
 
@@ -20,8 +20,8 @@ function allTasks() {
   todos.forEach((todos) => {
     todoList.innerHTML += `
     <div class="one">
-     <input type="checkbox">
-     <p>${todos.description}</p>
+      <input type="checkbox" ${todos.completed ? 'checked' : ''}>
+      <p>${todos.description}</p>
       <i class="fas fa-ellipsis-v"></i>
     </div>
     `;
