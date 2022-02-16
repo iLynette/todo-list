@@ -1,12 +1,30 @@
-import _ from "lodash";
+import _ from 'lodash'; //eslint-disable-line
+import './style.css';
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+const todoList = document.getElementById('dynamic-list');
+const todos = [
+  {
+    description: 'Wash the dishes',
+    completed: false,
+    index: 0,
+  },
+  {
+    description: 'complete To Do list project',
+    completed: false,
+    index: 1,
+  },
+];
+
+function allTasks() {
+  todoList.innerHTML = '';
+  todos.forEach((todos) => {
+    todoList.innerHTML += `
+    <div class="one">
+     <input type="checkbox">
+     <p>${todos.description}</p>
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+    `;
+  });
+}
+window.onload = allTasks();
