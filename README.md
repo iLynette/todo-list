@@ -18,7 +18,7 @@
 - Create a new folder to store the files in.
 ### Install
 - Open your command prompt or terminal and run.
-- git clone <branch-name>.
+- git clone <https://github.com/iLynette/todo-list.git>.
 ### Run tests
 
 - To run tests run :
