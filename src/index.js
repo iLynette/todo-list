@@ -17,13 +17,13 @@ const todos = [
 
 function allTasks() {
   todoList.innerHTML = '';
-  todos.forEach((todos) => {
+  todos.sort((a, b) => a.index - b.index).forEach((todos) => {
     todoList.innerHTML += `
-    <div class="one">
+    <form class="one">
       <input type="checkbox" ${todos.completed ? 'checked' : ''}>
-      <p>${todos.description}</p>
+      <p>${todos.description}.index</p>
       <i class="fas fa-ellipsis-v"></i>
-    </div>
+    </form>
     `;
   });
 }
