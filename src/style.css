@@ -53,10 +53,12 @@ body {
   color: rgb(105, 102, 102);
 }
 
-.one i {
+.one button {
   position: absolute;
   right: 12%;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .delete {
