@@ -19,7 +19,7 @@ const allTasks = () => {
       checkBox.addEventListener('change', () => onchange(todos));
       todoCard.appendChild(checkBox);
       const description = document.createElement('p');
-      if(todos.completed){
+      if (todos.completed) {
         description.style.textDecoration = 'line-through';
       }
       description.innerHTML = todos.description;
