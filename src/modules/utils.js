@@ -1,4 +1,4 @@
-import TodoList from './todoList';
+import TodoList from './todoList.js';
 
 const todo = new TodoList();
 const todoList = document.getElementById('dynamic-list');
@@ -33,7 +33,6 @@ const allTasks = () => {
     });
 };
 const editDescription = (todos = {}) => {
-  console.log('edit me');
   const todoCard = document.getElementById(todos.id);
   todoCard.replaceChildren();
   const checkBox = document.createElement('input');
@@ -73,7 +72,6 @@ const onchange = (todos = {}) => {
   todos.completed = !todos.completed;
   todo.edit(todos);
   allTasks();
-  console.log(todos);
 };
 const checkDb = () => {
   if (localStorage.getItem('todos')) {
@@ -86,11 +84,9 @@ const checkDb = () => {
 
 const addNewToDo = () => {
   const todoTask = document.getElementById('list-activity').value;
-  console.log(todoTask);
   if (todoTask.trim().length > 0) {
     todo.addTodo(todoTask);
     form.reset();
-    console.log(todoTask);
     allTasks();
   }
 };
