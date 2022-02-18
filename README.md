@@ -2,7 +2,7 @@
 # to do List
 > To do list is a simple CRUD application that allows you to add, delete, update tasks that you are supposed to do.
 
-![screenshot](./todolist.png)
+![screenshot](./one.png)
 ## Built With
 - HTML-5
 - CSS3
