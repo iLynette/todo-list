@@ -12,13 +12,22 @@
 
 ## Getting Started
 - To get a local copy up and running follow these simple example steps.
+
 ### Prerequisites
-- You only need a browser to run the html file in.
+
+A Web Browser (preferably Google Chrome)
+
 ### Setup
-- Create a new folder to store the files in.
-### Install
 - Open your command prompt or terminal and run.
-- git clone <https://github.com/iLynette/todo-list.git>.
+- Clone the GitHub Repository from <https://github.com/iLynette/todo-list.git>
+- run this commands in your terminal:
+     - `npm install`
+     - `npm run build`
+     - `npm start`
+
+### Usage
+after running `npm start` the website will be opened automatically on your default browser.
+
 ### Run tests
 
 - To run tests run :
