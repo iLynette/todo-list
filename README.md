@@ -10,6 +10,9 @@
 - Webpack
 - Linters
 
+## Live Demo
+For the link to the live demo, [Click here](https://ilynette.github.io/todo-list/)
+
 ## Getting Started
 - To get a local copy up and running follow these simple example steps.
 
