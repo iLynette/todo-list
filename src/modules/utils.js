@@ -1,10 +1,13 @@
 import TodoList from './todoList.js';
 
-const todo = new TodoList();
+let todo = new TodoList();
 const todoList = document.getElementById('dynamic-list');
 const form = document.getElementById('form');
-const allTasks = () => {
-  todoList.innerHTML = '';
+export const allTasks = (T) => {
+  if(T != null && T != undefined){
+    todo = T;
+  }
+  document.getElementById('dynamic-list').innerHTML = '';
   todo.todos
     .sort((a, b) => a.index - b.index)
     .map((todos) => {
@@ -30,7 +33,7 @@ const allTasks = () => {
       icon.classList.add('fas', 'fa-ellipsis-v');
       button.appendChild(icon);
       todoCard.appendChild(button);
-      todoList.appendChild(todoCard);
+      document.getElementById('dynamic-list').appendChild(todoCard);
 
       return todoCard;
     });
@@ -93,7 +96,7 @@ const addNewToDo = () => {
     allTasks();
   }
 };
-const genesis = () => {
+export const genesis = () => {
   checkDb();
   form.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
@@ -106,4 +109,4 @@ const genesis = () => {
   };
 };
 
-export default genesis;
+
