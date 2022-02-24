@@ -1,5 +1,3 @@
-
-
 import TodoList from './src/modules/todoList';
 import * as gin from './src/modules/utils.js';
 
@@ -46,5 +44,21 @@ describe('Add the added todo to the DOM',()=>{
     gin.allTasks(todoList);
     const tasksList = document.getElementById('dynamic-list');
     expect(tasksList.childNodes.length).toBe(2);
+  });
+});
+
+describe('Remove first todo from todoList', () =>{
+  test('One task has been remove expect zero',()=>{
+    const { id } = todoList.todos[0];
+    const taskCard = document.getElementById(id);
+    taskCard.parentNode.removeChild(taskCard);
+    expect(todoList.delete(id)).toBe(id);
+  });
+});
+
+describe('Check if task card had been removed from DOM',()=>{
+  test('One card removed expect node children to be 0',()=>{
+    const tasksList = document.getElementById('dynamic-list');
+    expect(tasksList.childNodes.length).toBe(1);
   });
 });
