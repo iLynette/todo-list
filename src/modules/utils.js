@@ -4,7 +4,7 @@ let todo = new TodoList();
 const todoList = document.getElementById('dynamic-list');
 const form = document.getElementById('form');
 export const allTasks = (T) => {
-  if(T != null && T != undefined){
+  if (T !== null && T !== undefined) {
     todo = T;
   }
   document.getElementById('dynamic-list').innerHTML = '';
@@ -108,5 +108,3 @@ export const genesis = () => {
     allTasks();
   };
 };
-
-
