@@ -20,6 +20,7 @@ export default class TodoList {
      this.todos = this.todos.filter((t) => t.id !== id);
      this.sort();
      this.save();
+     return id;
    };
 
    sort= () => {
