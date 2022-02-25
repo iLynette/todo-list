@@ -38,7 +38,7 @@ export default class TodoList {
 
    getTodos = (i = 1) => {
      this.todos = JSON.parse(localStorage.getItem('todos'));
-      return this.todos[i - 1];
+     return this.todos[i - 1];
    };
 
    clearComplete = () => {

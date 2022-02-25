@@ -68,7 +68,7 @@ describe('edit todos', () => {
     const todo = todoList.todos[0];
     todo.description = 'finish the week';
     expect(todoList.edit(todo).description).toBe(todo.description);
-  })
+  });
 });
 
 describe('update completed to true', () => {
@@ -85,6 +85,3 @@ describe('clear all completed', () => {
     expect(todoList.todos.length).toBe(0);
   });
 });
-
-
-
