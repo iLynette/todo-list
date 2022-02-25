@@ -56,8 +56,19 @@ describe('Remove first todo from todoList', () => {
 });
 
 describe('Check if task card had been removed from DOM', () => {
-  test('One card removed expect node children to be 0', () => {
+  test('One card removed expect node children to be 1', () => {
     const tasksList = document.getElementById('dynamic-list');
     expect(tasksList.childNodes.length).toBe(1);
   });
 });
+
+describe('edit todos', () => {
+  test('Edited description should be equal to new value', () => {
+    todoList.addTodo('watch a movie');
+    const todo = todoList.todos[0];
+    todo.description = 'finish the week';
+    expect(todoList.edit(todo).description).toBe(todo.description);
+  })
+});
+
+
