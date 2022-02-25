@@ -80,9 +80,9 @@ describe('update completed to true', () => {
 });
 
 describe('clear all completed', () => {
-  test('One task marked as completed and cleared, todos should be 1', () => {
+  test('One task marked as completed and cleared, todos should be 0', () => {
     todoList.clearComplete();
-    expect(todoList.todos.length).toBe(1);
+    expect(todoList.todos.length).toBe(0);
   });
 });
 
