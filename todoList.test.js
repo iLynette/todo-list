@@ -71,4 +71,20 @@ describe('edit todos', () => {
   })
 });
 
+describe('update completed to true', () => {
+  test('Todo marked as completed , should be truthy', () => {
+    const todo = todoList.todos[0];
+    todo.completed = true;
+    expect(todoList.edit(todo).completed).toBeTruthy();
+  });
+});
+
+describe('clear all completed', () => {
+  test('One task marked as completed and cleared, todos should be 1', () => {
+    todoList.clearComplete();
+    expect(todoList.todos.length).toBe(1);
+  });
+});
+
+
 
