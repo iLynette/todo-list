@@ -33,10 +33,12 @@ export default class TodoList {
    edit = (todo = {}) => {
      this.todos[todo.index - 1] = todo;
      this.save();
+     return todo;
    };
 
-   getTodos = () => {
+   getTodos = (i = 1) => {
      this.todos = JSON.parse(localStorage.getItem('todos'));
+     return this.todos[i - 1];
    };
 
    clearComplete = () => {
